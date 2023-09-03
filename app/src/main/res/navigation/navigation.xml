@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/firstPage">
+    <fragment
+        android:id="@+id/firstPage"
+        android:name="com.app.gemproperties.fragments.firstpage.FirstPage"
+        android:label="FirstPage"
+        tools:layout="@layout/fragment_first_page">
+        <action
+            android:id="@+id/action_firstPage_to_logFragment"
+            app:destination="@id/logFragment" />
+        <action
+            android:id="@+id/action_firstPage_to_registerFragment3"
+            app:destination="@id/registerFragment3" />
+        <action
+            android:id="@+id/action_firstPage_to_listingFragment"
+            app:destination="@id/listingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment3"
+        android:name="com.app.gemproperties.fragments.registerf.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/logFragment"
+        android:name="com.app.gemproperties.fragments.loginf.LogFragment"
+        android:label="LogFragment" >
+        <action
+            android:id="@+id/action_logFragment_to_listingFragment"
+            app:destination="@id/listingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listingFragment"
+        android:name="com.app.gemproperties.fragments.listings.ListingFragment"
+        android:label="fragment_listing"
+        tools:layout="@layout/fragment_listing" >
+        <action
+            android:id="@+id/action_listingFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.app.gemproperties.fragments.listings.AddFragment"
+        android:label="AddFragment" />
+</navigation>
