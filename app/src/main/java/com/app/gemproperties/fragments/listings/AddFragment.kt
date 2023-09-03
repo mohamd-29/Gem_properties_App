@@ -35,7 +35,7 @@ class AddFragment : Fragment() {
                     var name = binding.editTextTextPersonName.text.toString()
                     val newHouse=House(comp, 0, name )
                     val response = try {
-                        RetrofitInstance.api.createTask(newHouse)
+                        RetrofitInstance.api.createHouse(newHouse)
                     } catch (e: IOException) {
                         Log.e(TAG, "IOException, you might not have internet connection")
 
@@ -52,8 +52,6 @@ class AddFragment : Fragment() {
                     }
                 }
             }
-
-
 
         return binding.root
 

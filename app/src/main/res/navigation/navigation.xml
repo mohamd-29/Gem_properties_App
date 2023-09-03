@@ -40,9 +40,23 @@
         <action
             android:id="@+id/action_listingFragment_to_addFragment"
             app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listingFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
         android:name="com.app.gemproperties.fragments.listings.AddFragment"
         android:label="AddFragment" />
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.app.gemproperties.fragments.listings.UpdateFragment"
+        android:label="UpdateFragment" >
+        <argument
+            android:name="curHouse"
+            app:argType="com.app.gemproperties.fragments.listings.House" />
+        <action
+            android:id="@+id/action_updateFragment_to_listingFragment"
+            app:destination="@id/listingFragment" />
+    </fragment>
 </navigation>

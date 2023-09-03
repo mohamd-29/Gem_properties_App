@@ -2,7 +2,9 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs.kotlin'
-
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -56,6 +58,8 @@ dependencies {
     // navigation
     implementation 'androidx.navigation:navigation-fragment:2.5.2'
 
+    //parce
+    implementation "org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10"
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
